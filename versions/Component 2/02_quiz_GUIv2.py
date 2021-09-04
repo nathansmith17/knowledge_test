@@ -4,7 +4,7 @@ from functools import partial  # To prevent unwanted windows
 import json
 import random
 
-with open('quiz.json') as f:
+with open('../Component 3/quiz.json') as f:
     obj = json.load(f)
 q = (obj['ques'])
 options = (obj['options'])

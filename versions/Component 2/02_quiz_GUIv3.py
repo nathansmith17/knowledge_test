@@ -4,17 +4,6 @@ from functools import partial  # To prevent unwanted windows
 import json
 import random
 
-# with open('quiz.json') as f:
-#     obj = json.load(f)
-# q = (obj['ques'])
-# options = (obj['options'])
-# a = (obj['ans'])
-# z = zip(q, options, a)
-# l = list(z)
-ans = []
-# random.shuffle(l)
-# q, options, a = zip(*l)
-
 
 class Menu:
     def __init__(self):
@@ -123,6 +112,8 @@ class Quiz:
         self.quiz_frame.grid()
 
         self.qn = 0
+        self.qno = 1
+        self.quest = StringVar()
         self.ques = self.question(self.qn)
         self.opt_selected = IntVar()
         self.opts = self.radio_btns()
@@ -133,11 +124,11 @@ class Quiz:
     def question(self, qn):
         t = Label(self.quiz_frame, text="Quiz in Python Programming",
                   width=50, bg="#DAE8FC",
-                  fg="white", font=("Arial", 20, "bold"))
+                  fg="black", font=("Arial", 20, "bold"))
         t.place(x=0, y=2)
-        qn = Label(self.quiz_frame, text=q[qn], width=60,
-                   font=("Arial", 16, "bold"),
-                   anchor="w")
+        self.quest.set(str(self.qno) + ". " + q[qn])
+        qn = Label(self.quiz_frame, textvariable=self.quest, width=60,
+                   font=("Arial", 16, "bold"), anchor="w")
         qn.place(x=70, y=100)
         return qn
 
@@ -174,7 +165,6 @@ class Quiz:
         quit_button.place(x=380, y=380)
 
     def check_ans(self, qn):
-        ans.append(self.opt_selected.get())
         if self.opt_selected.get() == a[qn]:
             return True
 
@@ -182,9 +172,11 @@ class Quiz:
         if self.check_ans(self.qn):
             self.correct += 1
         self.qn += 1
+        self.qno += 1
         if self.qn == len(q):
             self.display_result()
         else:
+            self.quest.set(str(self.qno) + ". " + q[self.qn])
             self.display_options(self.qn)
 
     def display_result(self):
