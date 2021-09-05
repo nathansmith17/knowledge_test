@@ -171,7 +171,7 @@ class Quiz:
             self.opts[val]['text'] = op
             val += 1
 
-    def buttons(self, partner):
+    def buttons(self):
         n_button = Button(self.quiz_frame, text="Next", command=self.next_btn,
                           width=10, bg="green", fg="white",
                           font=("Arial", 16, "bold"))
