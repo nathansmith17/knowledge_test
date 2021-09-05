@@ -1,0 +1,46 @@
+{
+   "ques" : [
+     "Grand Central Terminal, Park Avenue, New York is the world's",
+     "Entomology is the science that studies",
+     "Eritrea, which became the 182nd member of the UN in 1993, is in the continent of",
+     "Garampani sanctuary is located at",
+     "For which of the following disciplines is Nobel Prize awarded?",
+     "FFC stands for",
+     "Fastest shorthand writer was",
+     "Epsom (England) is the place associated with",
+     "Galileo was an Italian astronomer who",
+     "Exposure to sunlight helps a person improve his health because",
+     "Golf player Vijay Singh belongs to which country?",
+     "First Afghan War took place in",
+     "First China War was fought between",
+     "For the Olympics and World Tournaments, the dimensions of basketball court are",
+     "Federation Cup, World Cup, Allywyn International Trophy and Challenge Cup are awarded to winners of",
+     "Each year World Red Cross and Red Crescent Day is celebrated on"
+   ],
+
+    "options" : [
+      ["largest railway station", "highest railway station", "longest railway station", "None of the above"],
+      ["Behavior of human beings", "Insects", "The origin and history of technical and scientific terms",
+        "The formation of rocks"],
+      ["Asia", "Africa", "Europe", "Australia"],
+      ["Junagarh, Gujarat", "Diphu, Assam", "Kohima, Nagaland", "Gangtok, Sikkim"],
+      ["Physics and Chemistry", "Physiology or Medicine", "Literature, Peace and Economics", "All of the above"],
+      ["Foreign Finance Corporation", "Film Finance Corporation", "Federation of Football Council",
+        "None of the above"],
+      ["Dr. G. D. Bist", "J.R.D. Tata", "J.M. Tagore", "Khudada Khan"],
+      ["Horse racing", "Polo", "Shooting", "Snooker"],
+      ["developed the telescope", "discovered four satellites of Jupiter", "pendulum movement", "All of the above"],
+      ["the infrared light kills bacteria in the body", "resistance power increases",
+        "the pigment cells in the skin get stimulated and produce a healthy tan",
+        "the ultraviolet rays convert skin oil into Vitamin D"],
+      ["USA", "Fiji", "India", "UK"],
+      ["1833", "1843", "1839", "1848"],
+      ["China and Britain", "China and France", "China and Egypt", "China and Greek"],
+      ["26 m x 14 m", "28 m x 15 m", "27 m x 16 m", "28 m x 16 m"],
+      ["Tennis", "Volleyball", "Basketball", "Cricket"],
+      ["June 8", "May 18", "May 8", "June 18"]
+    ],
+
+    "ans" : [1, 2, 2, 2, 4, 2, 1, 1, 4, 4, 2, 3, 1, 2, 3, 3]
+
+}
