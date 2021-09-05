@@ -177,7 +177,7 @@ class Quiz:
                           font=("Arial", 16, "bold"))
         n_button.place(x=200, y=380)
         quit_button = Button(self.quiz_frame, text="Quit",
-                             command=self.start_box.destroy(),
+                             command=self.quiz_frame.destroy(),
                              width=10, bg="red", fg="white",
                              font=("Arial", 16, "bold"))
         quit_button.place(x=380, y=380)
