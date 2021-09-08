@@ -63,8 +63,8 @@ class Menu:
         # Export results button (row 1)
         self.export_button = Button(self.menu_frame, text="Export",
                                     font=("Arial", "14"), justify=CENTER,
-                                    padx=10, pady=10,
-                                    command=self.export)
+                                    padx=10, pady=10, )
+        # command=self.export)
         self.export_button.grid(row=2)
 
     def help(self):
@@ -80,8 +80,6 @@ class Menu:
     def start(self):
         print("start")
         Quiz(self)
-
-
 
 
 class Help:
@@ -239,8 +237,6 @@ class Quiz:
     def close_quiz(self, partner):
         partner.start_button.config(state=NORMAL)
         self.start_box.destroy()
-
-class Export:
 
 
 # main routine
