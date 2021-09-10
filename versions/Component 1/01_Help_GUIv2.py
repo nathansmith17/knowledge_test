@@ -62,8 +62,6 @@ class Help:
                                   command=self.close_help)
         self.dismiss_btn.grid(row=2, pady=10)
 
-    def close_help(self):
-        self.help_box.destroy()
 
 
 # main routine
