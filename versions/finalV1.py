@@ -182,7 +182,9 @@ class Quiz:
                                   width=10, bg="red", fg="white",
                                   font=("Arial", 16, "bold"))
         self.quit_button.place(x=380, y=380)
-
+        
+        # quiz gui is based off of 
+        # https://github.com/ChristobelDiana/quizapp
         self.qn = 8
         self.qno = 1
         self.quest = StringVar()
@@ -193,6 +195,7 @@ class Quiz:
         self.buttons()
         self.correct = 0
 
+    # gets the questions from the dictionary
     def question(self, qn):
         t = Label(self.quiz_frame, text="General Knowledge Quiz",
                   width=50, bg="#DAE8FC",
@@ -204,7 +207,8 @@ class Quiz:
                    font=("Arial", 12, "bold"), anchor="w")
         qn.place(x=70, y=100)
         return qn
-
+    
+    # displays the buttons for the multi-choice quiz
     def radio_btns(self):
         background = "#DAE8FC"
         val = 0
@@ -219,7 +223,8 @@ class Quiz:
             val += 1
             yp += 40
         return b
-
+    
+    # displays the questions right next to the buttons
     def display_options(self, qn):
         val = 0
         self.opt_selected.set(0)
@@ -231,7 +236,8 @@ class Quiz:
             print(op)
             # sends opts to list
             ans.append(op)
-
+    
+    # displays the next button
     def buttons(self):
         n_button = Button(self.quiz_frame, text="Next", command=self.next_btn,
                           width=10, bg="green", fg="white",
@@ -243,7 +249,8 @@ class Quiz:
         #                      width=10, bg="red", fg="white",
         #                      font=("Arial", 16, "bold"))
         # quit_button.place(x=380, y=380)
-
+    
+    # checks answer given from user
     def check_ans(self, qn):
         # print to console to confirm the information can be stored
         print(self.opt_selected.get())
@@ -251,7 +258,8 @@ class Quiz:
         ans.append(str(self.opt_selected.get()))
         if self.opt_selected.get() == a[qn]:
             return True
-
+    
+    # function for n_button
     def next_btn(self):
         if self.check_ans(self.qn):
             self.correct += 1
@@ -262,7 +270,8 @@ class Quiz:
         else:
             self.quest.set(str(self.qno) + ". " + q[self.qn])
             self.display_options(self.qn)
-
+    
+    # displays results in messagebox
     def display_result(self):
         score = int(self.correct / len(q) * 200)
         result = "Score: " + str(score) + "%"
@@ -271,7 +280,8 @@ class Quiz:
         wrong = "No. of wrong answers: " + str(wc)
         mb.showinfo("Result", "\n".join([result, correct, wrong]))
         print(ans)
-
+    
+    # closes the gui
     def close_quiz(self, partner):
         partner.start_button.config(state=NORMAL)
         self.start_box.destroy()
