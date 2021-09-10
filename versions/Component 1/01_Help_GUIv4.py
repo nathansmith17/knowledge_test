@@ -32,7 +32,12 @@ class Menu:
     def help(self):
         print("help")
         get_help = Help(self)
-        get_help.help_text.configure(text="Help text goes here")
+        get_help.help_text.configure(text="Press the 'START' button to start"
+                                          " the quiz. After it has finished, "
+                                          "the quiz will save the results "
+                                          "automatically. If you want to "
+                                          "export the results to a .txt file,"
+                                          " click 'EXPORT'.")
 
 
 class Help:
